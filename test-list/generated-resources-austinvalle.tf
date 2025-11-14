@@ -3,18 +3,18 @@
 
 # __generated__ by Terraform
 resource "github_repository" "all_0" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = "https://adventofcode.com/"
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = "https://adventofcode.com/"
+
   full_name                               = "austinvalle/aoc-2020"
   git_clone_url                           = "git://github.com/austinvalle/aoc-2020.git"
   gitignore_template                      = null
@@ -34,15 +34,14 @@ resource "github_repository" "all_0" {
   merge_commit_title                      = null
   name                                    = "aoc-2020"
   node_id                                 = "MDEwOlJlcG9zaXRvcnkzMTk4NDA1NzY="
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/aoc-2020.git"
-  svn_url                                 = "https://github.com/austinvalle/aoc-2020"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/aoc-2020.git"
+  svn_url                     = "https://github.com/austinvalle/aoc-2020"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -55,18 +54,18 @@ import {
 }
 
 resource "github_repository" "all_1" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = null
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = null
+
   full_name                               = "austinvalle/austinvalle"
   git_clone_url                           = "git://github.com/austinvalle/austinvalle.git"
   gitignore_template                      = null
@@ -86,15 +85,14 @@ resource "github_repository" "all_1" {
   merge_commit_title                      = null
   name                                    = "austinvalle"
   node_id                                 = "R_kgDOH1Shmw"
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/austinvalle.git"
-  svn_url                                 = "https://github.com/austinvalle/austinvalle"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/austinvalle.git"
+  svn_url                     = "https://github.com/austinvalle/austinvalle"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -107,18 +105,18 @@ import {
 }
 
 resource "github_repository" "all_2" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = "home site"
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = "home site"
+
   full_name                               = "austinvalle/austinvalle.com"
   git_clone_url                           = "git://github.com/austinvalle/austinvalle.com.git"
   gitignore_template                      = null
@@ -138,15 +136,14 @@ resource "github_repository" "all_2" {
   merge_commit_title                      = null
   name                                    = "austinvalle.com"
   node_id                                 = "MDEwOlJlcG9zaXRvcnkxMDkwODc2MDM="
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/austinvalle.com.git"
-  svn_url                                 = "https://github.com/austinvalle/austinvalle.com"
-  topics                                  = ["portfolio-website", "react"]
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/austinvalle.com.git"
+  svn_url                     = "https://github.com/austinvalle/austinvalle.com"
+  topics                      = ["portfolio-website", "react"]
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -159,18 +156,18 @@ import {
 }
 
 resource "github_repository" "all_3" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = "Prevent cloud misconfigurations during build-time for Terraform, Cloudformation, Kubernetes, Serverless framework and other infrastructure-as-code-languages with Checkov by Bridgecrew."
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = "Prevent cloud misconfigurations during build-time for Terraform, Cloudformation, Kubernetes, Serverless framework and other infrastructure-as-code-languages with Checkov by Bridgecrew."
+
   full_name                               = "austinvalle/checkov"
   git_clone_url                           = "git://github.com/austinvalle/checkov.git"
   gitignore_template                      = null
@@ -190,15 +187,14 @@ resource "github_repository" "all_3" {
   merge_commit_title                      = null
   name                                    = "checkov"
   node_id                                 = "MDEwOlJlcG9zaXRvcnk0MDg0MzgyOTE="
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/checkov.git"
-  svn_url                                 = "https://github.com/austinvalle/checkov"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/checkov.git"
+  svn_url                     = "https://github.com/austinvalle/checkov"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -211,18 +207,18 @@ import {
 }
 
 resource "github_repository" "all_4" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = "Discord Guild Probe - utility for scanning a discord guild and messages for admin use"
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = "Discord Guild Probe - utility for scanning a discord guild and messages for admin use"
+
   full_name                               = "austinvalle/dgp"
   git_clone_url                           = "git://github.com/austinvalle/dgp.git"
   gitignore_template                      = null
@@ -242,15 +238,14 @@ resource "github_repository" "all_4" {
   merge_commit_title                      = null
   name                                    = "dgp"
   node_id                                 = "R_kgDOH6tPPw"
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/dgp.git"
-  svn_url                                 = "https://github.com/austinvalle/dgp"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/dgp.git"
+  svn_url                     = "https://github.com/austinvalle/dgp"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -263,18 +258,18 @@ import {
 }
 
 resource "github_repository" "all_5" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = null
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = null
+
   full_name                               = "austinvalle/fantasy-calculator"
   git_clone_url                           = "git://github.com/austinvalle/fantasy-calculator.git"
   gitignore_template                      = null
@@ -294,15 +289,14 @@ resource "github_repository" "all_5" {
   merge_commit_title                      = null
   name                                    = "fantasy-calculator"
   node_id                                 = "MDEwOlJlcG9zaXRvcnkxNDIxMDQ1NTM="
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/fantasy-calculator.git"
-  svn_url                                 = "https://github.com/austinvalle/fantasy-calculator"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/fantasy-calculator.git"
+  svn_url                     = "https://github.com/austinvalle/fantasy-calculator"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -315,18 +309,18 @@ import {
 }
 
 resource "github_repository" "all_6" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = "More research around different implementations of web components"
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = "More research around different implementations of web components"
+
   full_name                               = "austinvalle/gh-web-components"
   git_clone_url                           = "git://github.com/austinvalle/gh-web-components.git"
   gitignore_template                      = null
@@ -346,15 +340,14 @@ resource "github_repository" "all_6" {
   merge_commit_title                      = null
   name                                    = "gh-web-components"
   node_id                                 = "MDEwOlJlcG9zaXRvcnkxOTkxMjM1MTE="
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/gh-web-components.git"
-  svn_url                                 = "https://github.com/austinvalle/gh-web-components"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/gh-web-components.git"
+  svn_url                     = "https://github.com/austinvalle/gh-web-components"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -367,18 +360,18 @@ import {
 }
 
 resource "github_repository" "all_7" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = "messing around with reflection/linting/analysis/etc"
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = "messing around with reflection/linting/analysis/etc"
+
   full_name                               = "austinvalle/go-internals-sandbox"
   git_clone_url                           = "git://github.com/austinvalle/go-internals-sandbox.git"
   gitignore_template                      = null
@@ -398,15 +391,14 @@ resource "github_repository" "all_7" {
   merge_commit_title                      = null
   name                                    = "go-internals-sandbox"
   node_id                                 = "R_kgDOJBQ8FQ"
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/go-internals-sandbox.git"
-  svn_url                                 = "https://github.com/austinvalle/go-internals-sandbox"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/go-internals-sandbox.git"
+  svn_url                     = "https://github.com/austinvalle/go-internals-sandbox"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -419,18 +411,18 @@ import {
 }
 
 resource "github_repository" "all_8" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = "CLI for downloading youtube videos/audio and renaming metadata"
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = "CLI for downloading youtube videos/audio and renaming metadata"
+
   full_name                               = "austinvalle/gotube"
   git_clone_url                           = "git://github.com/austinvalle/gotube.git"
   gitignore_template                      = null
@@ -450,15 +442,14 @@ resource "github_repository" "all_8" {
   merge_commit_title                      = null
   name                                    = "gotube"
   node_id                                 = "MDEwOlJlcG9zaXRvcnkxMjA5Nzk4ODM="
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/gotube.git"
-  svn_url                                 = "https://github.com/austinvalle/gotube"
-  topics                                  = ["cli", "command-line", "golang", "metadata-editor", "plex", "youtube-downloader"]
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/gotube.git"
+  svn_url                     = "https://github.com/austinvalle/gotube"
+  topics                      = ["cli", "command-line", "golang", "metadata-editor", "plex", "youtube-downloader"]
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -471,18 +462,18 @@ import {
 }
 
 resource "github_repository" "all_9" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = "utility bot for google hangouts"
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = "utility bot for google hangouts"
+
   full_name                               = "austinvalle/hammy-bot"
   git_clone_url                           = "git://github.com/austinvalle/hammy-bot.git"
   gitignore_template                      = null
@@ -502,15 +493,14 @@ resource "github_repository" "all_9" {
   merge_commit_title                      = null
   name                                    = "hammy-bot"
   node_id                                 = "MDEwOlJlcG9zaXRvcnk2NjI0ODMzMQ=="
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/hammy-bot.git"
-  svn_url                                 = "https://github.com/austinvalle/hammy-bot"
-  topics                                  = ["bot", "hangouts", "hangoutsbot", "javascript"]
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/hammy-bot.git"
+  svn_url                     = "https://github.com/austinvalle/hammy-bot"
+  topics                      = ["bot", "hangouts", "hangoutsbot", "javascript"]
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -523,18 +513,18 @@ import {
 }
 
 resource "github_repository" "all_10" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = null
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = null
+
   full_name                               = "austinvalle/hello-github-actions"
   git_clone_url                           = "git://github.com/austinvalle/hello-github-actions.git"
   gitignore_template                      = null
@@ -554,15 +544,14 @@ resource "github_repository" "all_10" {
   merge_commit_title                      = null
   name                                    = "hello-github-actions"
   node_id                                 = "MDEwOlJlcG9zaXRvcnkyMDY3MDM1ODU="
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/hello-github-actions.git"
-  svn_url                                 = "https://github.com/austinvalle/hello-github-actions"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/hello-github-actions.git"
+  svn_url                     = "https://github.com/austinvalle/hello-github-actions"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -575,18 +564,18 @@ import {
 }
 
 resource "github_repository" "all_11" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = "Pretty basic theme for Hugo that covers all of the essentials. All you have to do is start typing!"
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = "Pretty basic theme for Hugo that covers all of the essentials. All you have to do is start typing!"
+
   full_name                               = "austinvalle/hugo-theme-hello-friend-ng"
   git_clone_url                           = "git://github.com/austinvalle/hugo-theme-hello-friend-ng.git"
   gitignore_template                      = null
@@ -606,15 +595,14 @@ resource "github_repository" "all_11" {
   merge_commit_title                      = null
   name                                    = "hugo-theme-hello-friend-ng"
   node_id                                 = "R_kgDOGi23Ug"
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/hugo-theme-hello-friend-ng.git"
-  svn_url                                 = "https://github.com/austinvalle/hugo-theme-hello-friend-ng"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/hugo-theme-hello-friend-ng.git"
+  svn_url                     = "https://github.com/austinvalle/hugo-theme-hello-friend-ng"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -627,18 +615,18 @@ import {
 }
 
 resource "github_repository" "all_12" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = "Visual timeline of the Marvel Cinematic Universe"
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = "Visual timeline of the Marvel Cinematic Universe"
+
   full_name                               = "austinvalle/mcu-timeline"
   git_clone_url                           = "git://github.com/austinvalle/mcu-timeline.git"
   gitignore_template                      = null
@@ -658,15 +646,14 @@ resource "github_repository" "all_12" {
   merge_commit_title                      = null
   name                                    = "mcu-timeline"
   node_id                                 = "MDEwOlJlcG9zaXRvcnkxODU2OTk2NzA="
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/mcu-timeline.git"
-  svn_url                                 = "https://github.com/austinvalle/mcu-timeline"
-  topics                                  = ["infographic", "marvel", "mcu", "parallax"]
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/mcu-timeline.git"
+  svn_url                     = "https://github.com/austinvalle/mcu-timeline"
+  topics                      = ["infographic", "marvel", "mcu", "parallax"]
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -679,18 +666,18 @@ import {
 }
 
 resource "github_repository" "all_13" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = null
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = null
+
   full_name                               = "austinvalle/mlbot"
   git_clone_url                           = "git://github.com/austinvalle/mlbot.git"
   gitignore_template                      = null
@@ -710,15 +697,14 @@ resource "github_repository" "all_13" {
   merge_commit_title                      = null
   name                                    = "mlbot"
   node_id                                 = "MDEwOlJlcG9zaXRvcnkzMDU4NzkxNjg="
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/mlbot.git"
-  svn_url                                 = "https://github.com/austinvalle/mlbot"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/mlbot.git"
+  svn_url                     = "https://github.com/austinvalle/mlbot"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -731,18 +717,18 @@ import {
 }
 
 resource "github_repository" "all_14" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = "messing around with micro frontends"
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = "messing around with micro frontends"
+
   full_name                               = "austinvalle/ng-spa-land"
   git_clone_url                           = "git://github.com/austinvalle/ng-spa-land.git"
   gitignore_template                      = null
@@ -762,15 +748,14 @@ resource "github_repository" "all_14" {
   merge_commit_title                      = null
   name                                    = "ng-spa-land"
   node_id                                 = "MDEwOlJlcG9zaXRvcnkxMzYyNzc4OTE="
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/ng-spa-land.git"
-  svn_url                                 = "https://github.com/austinvalle/ng-spa-land"
-  topics                                  = ["angular", "javascript", "micro-frontends"]
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/ng-spa-land.git"
+  svn_url                     = "https://github.com/austinvalle/ng-spa-land"
+  topics                      = ["angular", "javascript", "micro-frontends"]
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -783,18 +768,18 @@ import {
 }
 
 resource "github_repository" "all_15" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = "allow plex users to request movies + tv shows to be added"
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = "allow plex users to request movies + tv shows to be added"
+
   full_name                               = "austinvalle/plex-rex"
   git_clone_url                           = "git://github.com/austinvalle/plex-rex.git"
   gitignore_template                      = null
@@ -814,15 +799,14 @@ resource "github_repository" "all_15" {
   merge_commit_title                      = null
   name                                    = "plex-rex"
   node_id                                 = "MDEwOlJlcG9zaXRvcnkxMzg5NjIxMDE="
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/plex-rex.git"
-  svn_url                                 = "https://github.com/austinvalle/plex-rex"
-  topics                                  = ["golang", "plex", "plexrequests", "react"]
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/plex-rex.git"
+  svn_url                     = "https://github.com/austinvalle/plex-rex"
+  topics                      = ["golang", "plex", "plexrequests", "react"]
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -835,18 +819,18 @@ import {
 }
 
 resource "github_repository" "all_16" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = null
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = null
+
   full_name                               = "austinvalle/projecteval"
   git_clone_url                           = "git://github.com/austinvalle/projecteval.git"
   gitignore_template                      = null
@@ -866,15 +850,14 @@ resource "github_repository" "all_16" {
   merge_commit_title                      = null
   name                                    = "projecteval"
   node_id                                 = "MDEwOlJlcG9zaXRvcnkyNTUwMTI4OA=="
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/projecteval.git"
-  svn_url                                 = "https://github.com/austinvalle/projecteval"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/projecteval.git"
+  svn_url                     = "https://github.com/austinvalle/projecteval"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -887,18 +870,18 @@ import {
 }
 
 resource "github_repository" "all_17" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = null
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = null
+
   full_name                               = "austinvalle/rest-api-example"
   git_clone_url                           = "git://github.com/austinvalle/rest-api-example.git"
   gitignore_template                      = null
@@ -918,15 +901,14 @@ resource "github_repository" "all_17" {
   merge_commit_title                      = null
   name                                    = "rest-api-example"
   node_id                                 = "R_kgDOIWG7jg"
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/rest-api-example.git"
-  svn_url                                 = "https://github.com/austinvalle/rest-api-example"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/rest-api-example.git"
+  svn_url                     = "https://github.com/austinvalle/rest-api-example"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -939,18 +921,18 @@ import {
 }
 
 resource "github_repository" "all_18" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = null
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = null
+
   full_name                               = "austinvalle/rtc-connect"
   git_clone_url                           = "git://github.com/austinvalle/rtc-connect.git"
   gitignore_template                      = null
@@ -970,15 +952,14 @@ resource "github_repository" "all_18" {
   merge_commit_title                      = null
   name                                    = "rtc-connect"
   node_id                                 = "MDEwOlJlcG9zaXRvcnkyNzc2NDk0MDA="
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/rtc-connect.git"
-  svn_url                                 = "https://github.com/austinvalle/rtc-connect"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/rtc-connect.git"
+  svn_url                     = "https://github.com/austinvalle/rtc-connect"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -991,18 +972,18 @@ import {
 }
 
 resource "github_repository" "all_19" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = "plex channel that lets you view sports streams from reddit"
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = "plex channel that lets you view sports streams from reddit"
+
   full_name                               = "austinvalle/SnooSports.bundle"
   git_clone_url                           = "git://github.com/austinvalle/SnooSports.bundle.git"
   gitignore_template                      = null
@@ -1022,15 +1003,14 @@ resource "github_repository" "all_19" {
   merge_commit_title                      = null
   name                                    = "SnooSports.bundle"
   node_id                                 = "MDEwOlJlcG9zaXRvcnkxMzA3Nzc0MTA="
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/SnooSports.bundle.git"
-  svn_url                                 = "https://github.com/austinvalle/SnooSports.bundle"
-  topics                                  = ["plex", "plex-media-server", "plugin", "python", "reddit", "streaming-video"]
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/SnooSports.bundle.git"
+  svn_url                     = "https://github.com/austinvalle/SnooSports.bundle"
+  topics                      = ["plex", "plex-media-server", "plugin", "python", "reddit", "streaming-video"]
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -1043,18 +1023,18 @@ import {
 }
 
 resource "github_repository" "all_20" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = "practicing TDD with different exercises"
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = "practicing TDD with different exercises"
+
   full_name                               = "austinvalle/tdd-katas"
   git_clone_url                           = "git://github.com/austinvalle/tdd-katas.git"
   gitignore_template                      = null
@@ -1074,15 +1054,14 @@ resource "github_repository" "all_20" {
   merge_commit_title                      = null
   name                                    = "tdd-katas"
   node_id                                 = "MDEwOlJlcG9zaXRvcnkyMDkxOTc2NDM="
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/tdd-katas.git"
-  svn_url                                 = "https://github.com/austinvalle/tdd-katas"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/tdd-katas.git"
+  svn_url                     = "https://github.com/austinvalle/tdd-katas"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -1095,18 +1074,18 @@ import {
 }
 
 resource "github_repository" "all_21" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = "Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned."
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = "Terraform enables you to safely and predictably create, change, and improve infrastructure. It is a source-available tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned."
+
   full_name                               = "austinvalle/terraform"
   git_clone_url                           = "git://github.com/austinvalle/terraform.git"
   gitignore_template                      = null
@@ -1126,15 +1105,14 @@ resource "github_repository" "all_21" {
   merge_commit_title                      = null
   name                                    = "terraform"
   node_id                                 = "R_kgDOPU81OA"
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/terraform.git"
-  svn_url                                 = "https://github.com/austinvalle/terraform"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/terraform.git"
+  svn_url                     = "https://github.com/austinvalle/terraform"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -1147,18 +1125,18 @@ import {
 }
 
 resource "github_repository" "all_22" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = null
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = null
+
   full_name                               = "austinvalle/terraform-provider-bufo"
   git_clone_url                           = "git://github.com/austinvalle/terraform-provider-bufo.git"
   gitignore_template                      = null
@@ -1178,15 +1156,14 @@ resource "github_repository" "all_22" {
   merge_commit_title                      = null
   name                                    = "terraform-provider-bufo"
   node_id                                 = "R_kgDOPU242g"
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/terraform-provider-bufo.git"
-  svn_url                                 = "https://github.com/austinvalle/terraform-provider-bufo"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/terraform-provider-bufo.git"
+  svn_url                     = "https://github.com/austinvalle/terraform-provider-bufo"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -1199,18 +1176,18 @@ import {
 }
 
 resource "github_repository" "all_23" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = null
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = null
+
   full_name                               = "austinvalle/terraform-provider-discord"
   git_clone_url                           = "git://github.com/austinvalle/terraform-provider-discord.git"
   gitignore_template                      = null
@@ -1230,15 +1207,14 @@ resource "github_repository" "all_23" {
   merge_commit_title                      = null
   name                                    = "terraform-provider-discord"
   node_id                                 = "R_kgDOJqyxyQ"
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/terraform-provider-discord.git"
-  svn_url                                 = "https://github.com/austinvalle/terraform-provider-discord"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/terraform-provider-discord.git"
+  svn_url                     = "https://github.com/austinvalle/terraform-provider-discord"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -1251,18 +1227,18 @@ import {
 }
 
 resource "github_repository" "all_24" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = "Terraform GitHub provider"
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = "Terraform GitHub provider"
+
   full_name                               = "austinvalle/terraform-provider-github"
   git_clone_url                           = "git://github.com/austinvalle/terraform-provider-github.git"
   gitignore_template                      = null
@@ -1282,15 +1258,14 @@ resource "github_repository" "all_24" {
   merge_commit_title                      = null
   name                                    = "terraform-provider-github"
   node_id                                 = "R_kgDOQVuRBw"
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/terraform-provider-github.git"
-  svn_url                                 = "https://github.com/austinvalle/terraform-provider-github"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/terraform-provider-github.git"
+  svn_url                     = "https://github.com/austinvalle/terraform-provider-github"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -1303,18 +1278,18 @@ import {
 }
 
 resource "github_repository" "all_25" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = null
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = null
+
   full_name                               = "austinvalle/terraform-provider-sandbox"
   git_clone_url                           = "git://github.com/austinvalle/terraform-provider-sandbox.git"
   gitignore_template                      = null
@@ -1334,15 +1309,14 @@ resource "github_repository" "all_25" {
   merge_commit_title                      = null
   name                                    = "terraform-provider-sandbox"
   node_id                                 = "R_kgDOIys6XQ"
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/terraform-provider-sandbox.git"
-  svn_url                                 = "https://github.com/austinvalle/terraform-provider-sandbox"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/terraform-provider-sandbox.git"
+  svn_url                     = "https://github.com/austinvalle/terraform-provider-sandbox"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -1355,18 +1329,18 @@ import {
 }
 
 resource "github_repository" "all_26" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = "Test repository for resource identity feature"
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = "Test repository for resource identity feature"
+
   full_name                               = "austinvalle/tf-test-identity-repo"
   git_clone_url                           = "git://github.com/austinvalle/tf-test-identity-repo.git"
   gitignore_template                      = null
@@ -1386,15 +1360,14 @@ resource "github_repository" "all_26" {
   merge_commit_title                      = null
   name                                    = "tf-test-identity-repo"
   node_id                                 = "R_kgDOQV50pw"
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/tf-test-identity-repo.git"
-  svn_url                                 = "https://github.com/austinvalle/tf-test-identity-repo"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/tf-test-identity-repo.git"
+  svn_url                     = "https://github.com/austinvalle/tf-test-identity-repo"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -1407,18 +1380,18 @@ import {
 }
 
 resource "github_repository" "all_27" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = true
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = "Social network project - Dylan, Matt, Jake, & Austin"
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = true
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = "Social network project - Dylan, Matt, Jake, & Austin"
+
   full_name                               = "austinvalle/Totem"
   git_clone_url                           = "git://github.com/austinvalle/Totem.git"
   gitignore_template                      = null
@@ -1438,15 +1411,14 @@ resource "github_repository" "all_27" {
   merge_commit_title                      = null
   name                                    = "Totem"
   node_id                                 = "MDEwOlJlcG9zaXRvcnkzNTc0NjY5OA=="
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/Totem.git"
-  svn_url                                 = "https://github.com/austinvalle/Totem"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/Totem.git"
+  svn_url                     = "https://github.com/austinvalle/Totem"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -1459,18 +1431,18 @@ import {
 }
 
 resource "github_repository" "all_28" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = "A smart mirror that displays time, weather, calendar events, and more."
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = "A smart mirror that displays time, weather, calendar events, and more."
+
   full_name                               = "austinvalle/valle-smart-mirror"
   git_clone_url                           = "git://github.com/austinvalle/valle-smart-mirror.git"
   gitignore_template                      = null
@@ -1490,15 +1462,14 @@ resource "github_repository" "all_28" {
   merge_commit_title                      = null
   name                                    = "valle-smart-mirror"
   node_id                                 = "MDEwOlJlcG9zaXRvcnk1MDA3NzU2MA=="
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/valle-smart-mirror.git"
-  svn_url                                 = "https://github.com/austinvalle/valle-smart-mirror"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/valle-smart-mirror.git"
+  svn_url                     = "https://github.com/austinvalle/valle-smart-mirror"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -1511,18 +1482,18 @@ import {
 }
 
 resource "github_repository" "all_29" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = "Hashicorp Unified Docs"
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = "Hashicorp Unified Docs"
+
   full_name                               = "austinvalle/web-unified-docs"
   git_clone_url                           = "git://github.com/austinvalle/web-unified-docs.git"
   gitignore_template                      = null
@@ -1542,15 +1513,14 @@ resource "github_repository" "all_29" {
   merge_commit_title                      = null
   name                                    = "web-unified-docs"
   node_id                                 = "R_kgDOOKuXTw"
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/web-unified-docs.git"
-  svn_url                                 = "https://github.com/austinvalle/web-unified-docs"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/web-unified-docs.git"
+  svn_url                     = "https://github.com/austinvalle/web-unified-docs"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
@@ -1563,18 +1533,18 @@ import {
 }
 
 resource "github_repository" "all_30" {
-  provider                                = github
-  allow_auto_merge                        = null
-  allow_merge_commit                      = null
-  allow_rebase_merge                      = null
-  allow_squash_merge                      = null
-  allow_update_branch                     = null
-  archive_on_destroy                      = null
-  archived                                = false
-  auto_init                               = null
-  delete_branch_on_merge                  = null
-  description                             = "Docker bundle that provides xTeVe and guide2go for enhanced guide data and Plex/Emby IPTV integration, and Lazystream for integrated high-quality NHL and MLB games."
-  fork                                    = null
+  provider               = github
+  allow_auto_merge       = null
+  allow_merge_commit     = null
+  allow_rebase_merge     = null
+  allow_squash_merge     = null
+  allow_update_branch    = null
+  archive_on_destroy     = null
+  archived               = false
+  auto_init              = null
+  delete_branch_on_merge = null
+  description            = "Docker bundle that provides xTeVe and guide2go for enhanced guide data and Plex/Emby IPTV integration, and Lazystream for integrated high-quality NHL and MLB games."
+
   full_name                               = "austinvalle/xteve_lazystream"
   git_clone_url                           = "git://github.com/austinvalle/xteve_lazystream.git"
   gitignore_template                      = null
@@ -1594,15 +1564,14 @@ resource "github_repository" "all_30" {
   merge_commit_title                      = null
   name                                    = "xteve_lazystream"
   node_id                                 = "MDEwOlJlcG9zaXRvcnkzNjg3MTM5MjY="
-  source_owner                            = null
-  source_repo                             = null
-  squash_merge_commit_message             = null
-  squash_merge_commit_title               = null
-  ssh_clone_url                           = "git@github.com:austinvalle/xteve_lazystream.git"
-  svn_url                                 = "https://github.com/austinvalle/xteve_lazystream"
-  topics                                  = []
-  visibility                              = "public"
-  web_commit_signoff_required             = null
+
+  squash_merge_commit_message = null
+  squash_merge_commit_title   = null
+  ssh_clone_url               = "git@github.com:austinvalle/xteve_lazystream.git"
+  svn_url                     = "https://github.com/austinvalle/xteve_lazystream"
+  topics                      = []
+  visibility                  = "public"
+  web_commit_signoff_required = null
 }
 
 import {
