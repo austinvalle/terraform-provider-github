@@ -2,7 +2,10 @@ package github
 
 import (
 	"context"
+	"fmt"
 	"os"
+	"regexp"
+	"strings"
 	"time"
 
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
@@ -191,6 +194,50 @@ func (p *FrameworkProvider) Configure(ctx context.Context, req provider.Configur
 	// Handle backwards compatibility for organization attribute
 	if !data.Organization.IsNull() && data.Organization.ValueString() != "" {
 		owner = data.Organization.ValueString()
+	}
+
+	// Handle app_auth if configured
+	if !data.AppAuth.IsNull() {
+		var appAuthList []struct {
+			ID             types.String `tfsdk:"id"`
+			InstallationID types.String `tfsdk:"installation_id"`
+			PemFile        types.String `tfsdk:"pem_file"`
+		}
+		diags := data.AppAuth.ElementsAs(ctx, &appAuthList, false)
+		if diags.HasError() {
+			resp.Diagnostics.Append(diags...)
+			return
+		}
+
+		if len(appAuthList) > 0 {
+			appAuth := appAuthList[0]
+			appID := appAuth.ID.ValueString()
+			appInstallationID := appAuth.InstallationID.ValueString()
+			appPemFile := appAuth.PemFile.ValueString()
+
+			// Replace \n with actual newlines for PEM file
+			appPemFile = strings.Replace(appPemFile, `\n`, "\n", -1)
+
+			appToken, err := GenerateOAuthTokenFromApp(baseURL, appID, appInstallationID, appPemFile)
+			if err != nil {
+				resp.Diagnostics.AddError(
+					"Error generating app token",
+					fmt.Sprintf("Could not generate OAuth token from GitHub App: %s", err.Error()),
+				)
+				return
+			}
+			token = appToken
+		}
+	}
+
+	// If no token is set, try to get it from gh CLI
+	if token == "" {
+		isGithubDotCom := regexp.MustCompile("^" + regexp.QuoteMeta("https://api.github.com")).MatchString(baseURL)
+		ghAuthToken, err := tokenFromGhCli(baseURL, isGithubDotCom)
+		if err == nil && ghAuthToken != "" {
+			token = ghAuthToken
+		}
+		// Note: If gh CLI token is not available, we'll continue with anonymous mode
 	}
 
 	// Set default values matching SDKv2 provider
