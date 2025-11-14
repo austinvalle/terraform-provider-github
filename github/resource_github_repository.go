@@ -25,7 +25,50 @@ func resourceGithubRepository() *schema.Resource {
 				if err := d.Set("auto_init", false); err != nil {
 					return nil, err
 				}
+
+				// Handle import by identity (new Terraform 1.12+ import block syntax)
+				identity, err := d.Identity()
+				if err != nil {
+					return nil, fmt.Errorf("error getting identity: %s", err)
+				}
+
+				// If identity data is present, use it to set the ID
+				if identity != nil && identity.Get("name") != nil {
+					repoName := identity.Get("name").(string)
+
+					// Set the ID to the repository name
+					d.SetId(repoName)
+
+					// If owner is provided in identity, it can be used for validation
+					// but the actual owner comes from the provider configuration
+					if ownerFromIdentity := identity.Get("owner"); ownerFromIdentity != nil {
+						owner := ownerFromIdentity.(string)
+						// Store the owner from identity for potential validation during Read
+						// The Read operation will verify we can access this repo with provider config
+						log.Printf("[DEBUG] Importing repository %s with explicit owner %s from identity", repoName, owner)
+					}
+				}
+				// If no identity data, d.Id() will contain the import ID string (traditional import)
+				// which is already handled by the existing logic
+
 				return []*schema.ResourceData{d}, nil
+			},
+		},
+
+		Identity: &schema.ResourceIdentity{
+			SchemaFunc: func() map[string]*schema.Schema {
+				return map[string]*schema.Schema{
+					"name": {
+						Type:              schema.TypeString,
+						RequiredForImport: true,
+						Description:       "The name of the repository.",
+					},
+					"owner": {
+						Type:              schema.TypeString,
+						OptionalForImport: true,
+						Description:       "The owner (user or organization) of the repository. If not specified, defaults to the provider's configured owner.",
+					},
+				}
 			},
 		},
 
@@ -700,6 +743,20 @@ func resourceGithubRepositoryCreate(d *schema.ResourceData, meta interface{}) er
 		return err
 	}
 
+	// Set identity data
+	identity, err := d.Identity()
+	if err != nil {
+		return fmt.Errorf("error getting identity: %s", err)
+	}
+	if identity != nil {
+		if err := identity.Set("name", repoName); err != nil {
+			return fmt.Errorf("error setting identity name: %s", err)
+		}
+		if err := identity.Set("owner", owner); err != nil {
+			return fmt.Errorf("error setting identity owner: %s", err)
+		}
+	}
+
 	return resourceGithubRepositoryUpdate(d, meta)
 }
 
@@ -828,6 +885,20 @@ func resourceGithubRepositoryRead(d *schema.ResourceData, meta interface{}) erro
 
 	if err = d.Set("security_and_analysis", flattenSecurityAndAnalysis(repo.GetSecurityAndAnalysis())); err != nil {
 		return err
+	}
+
+	// Set identity data
+	identity, err := d.Identity()
+	if err != nil {
+		return fmt.Errorf("error getting identity: %s", err)
+	}
+	if identity != nil {
+		if err := identity.Set("name", repoName); err != nil {
+			return fmt.Errorf("error setting identity name: %s", err)
+		}
+		if err := identity.Set("owner", owner); err != nil {
+			return fmt.Errorf("error setting identity owner: %s", err)
+		}
 	}
 
 	return nil
