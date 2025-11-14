@@ -1,48 +1,15 @@
 package github
 
-import (
-	"fmt"
-	"testing"
-
-	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
-)
-
-func TestAccGithubRepositoryList_basic(t *testing.T) {
-	// This test requires an actual GitHub account with repositories
-	// It will list all repositories for the configured owner
-
-	testCase := func(t *testing.T, mode string) {
-		resource.Test(t, resource.TestCase{
-			PreCheck:  func() { skipUnlessMode(t, mode) },
-			Providers: testAccProviders,
-			Steps: []resource.TestStep{
-				{
-					Config: testAccGithubRepositoryListConfig(),
-					Check: resource.ComposeTestCheckFunc(
-						// Just verify the list operation completes without error
-						// The actual number of repositories will vary by account
-						resource.TestCheckResourceAttrSet("data.github_repository.test", "name"),
-					),
-				},
-			},
-		})
-	}
-
-	t.Run("with an individual account", func(t *testing.T) {
-		testCase(t, individual)
-	})
-
-	t.Run("with an organization account", func(t *testing.T) {
-		testCase(t, organization)
-	})
-}
-
-func testAccGithubRepositoryListConfig() string {
-	return fmt.Sprintf(`
-# This data source uses the list operation behind the scenes
-# when querying for repository information
-data "github_repository" "test" {
-  name = "terraform-provider-github"
-}
-`)
-}
+// NOTE: Acceptance tests for list functionality should be performed manually
+// using the test configuration files in the test-list/ directory.
+//
+// List resources are tested using Terraform's "terraform query" command with
+// .tfquery.hcl files, which is different from standard resource testing.
+//
+// To test the list functionality:
+//   1. Build the provider: make build
+//   2. Navigate to test-list/: cd test-list
+//   3. Initialize: terraform init
+//   4. Run queries: terraform query -file=basic.tfquery.hcl
+//
+// See test-list/README.md for complete testing insterraform query -file=limited.tfquery.hcltructions.
