@@ -2,6 +2,7 @@ package github
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"log"
 	"strconv"
@@ -290,13 +291,13 @@ func resourceGithubRepositoryPullRequestUpdate(d *schema.ResourceData, meta inte
 		return resourceGithubRepositoryPullRequestRead(d, meta)
 	}
 
-	errors := []string{fmt.Sprintf("could not update the Pull Request: %v", err)}
+	errs := []string{fmt.Sprintf("could not update the Pull Request: %v", err)}
 
 	if err := resourceGithubRepositoryPullRequestRead(d, meta); err != nil {
-		errors = append(errors, fmt.Sprintf("could not read the Pull Request after the failed update: %v", err))
+		errs = append(errs, fmt.Sprintf("could not read the Pull Request after the failed update: %v", err))
 	}
 
-	return fmt.Errorf(strings.Join(errors, ", "))
+	return errors.New(strings.Join(errs, ", "))
 }
 
 func resourceGithubRepositoryPullRequestDelete(d *schema.ResourceData, meta interface{}) error {
