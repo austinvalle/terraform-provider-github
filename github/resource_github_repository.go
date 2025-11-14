@@ -22,34 +22,35 @@ func resourceGithubRepository() *schema.Resource {
 		Delete: resourceGithubRepositoryDelete,
 		Importer: &schema.ResourceImporter{
 			State: func(d *schema.ResourceData, meta interface{}) ([]*schema.ResourceData, error) {
-				if err := d.Set("auto_init", false); err != nil {
-					return nil, err
-				}
+				// Traditional import via CLI or import block with "id" field:
+				// The ID is already set by Terraform from the import string/id field
 
-				// Handle import by identity (new Terraform 1.12+ import block syntax)
+				// For identity-based import (Terraform 1.12+), check if identity data was provided
 				identity, err := d.Identity()
 				if err != nil {
 					return nil, fmt.Errorf("error getting identity: %s", err)
 				}
 
-				// If identity data is present, use it to set the ID
-				if identity != nil && identity.Get("name") != nil {
-					repoName := identity.Get("name").(string)
+				// If identity data is present with a name, use it to set the ID
+				if identity != nil {
+					if nameValue := identity.Get("name"); nameValue != nil && nameValue.(string) != "" {
+						repoName := nameValue.(string)
 
-					// Set the ID to the repository name
-					d.SetId(repoName)
+						// Set the ID to the repository name from identity
+						d.SetId(repoName)
 
-					// If owner is provided in identity, it can be used for validation
-					// but the actual owner comes from the provider configuration
-					if ownerFromIdentity := identity.Get("owner"); ownerFromIdentity != nil {
-						owner := ownerFromIdentity.(string)
-						// Store the owner from identity for potential validation during Read
-						// The Read operation will verify we can access this repo with provider config
-						log.Printf("[DEBUG] Importing repository %s with explicit owner %s from identity", repoName, owner)
+						// Log if explicit owner is provided in identity
+						if ownerFromIdentity := identity.Get("owner"); ownerFromIdentity != nil {
+							owner := ownerFromIdentity.(string)
+							log.Printf("[DEBUG] Importing repository %s with explicit owner %s from identity", repoName, owner)
+						}
 					}
 				}
-				// If no identity data, d.Id() will contain the import ID string (traditional import)
-				// which is already handled by the existing logic
+				// Note: If no identity data, d.Id() already contains the import ID string from traditional import
+
+				if err := d.Set("auto_init", false); err != nil {
+					return nil, err
+				}
 
 				return []*schema.ResourceData{d}, nil
 			},
