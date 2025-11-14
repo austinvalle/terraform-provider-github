@@ -30,6 +30,7 @@ type Config struct {
 
 type Owner struct {
 	name           string
+	owner          string // exported owner name for list resources
 	id             int64
 	v3client       *github.Client
 	v4client       *githubv4.Client
@@ -118,6 +119,7 @@ func (c *Config) NewRESTClient(client *http.Client) (*github.Client, error) {
 func (c *Config) ConfigureOwner(owner *Owner) (*Owner, error) {
 	ctx := context.Background()
 	owner.name = c.Owner
+	owner.owner = c.Owner // Set exported owner field
 	if owner.name == "" {
 		if c.Anonymous() {
 			return owner, nil
@@ -128,6 +130,7 @@ func (c *Config) ConfigureOwner(owner *Owner) (*Owner, error) {
 			return nil, err
 		}
 		owner.name = user.GetLogin()
+		owner.owner = owner.name // Set exported owner field
 	} else {
 		remoteOrg, _, err := owner.v3client.Organizations.Get(ctx, owner.name)
 		if err == nil {

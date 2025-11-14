@@ -3,8 +3,10 @@ package github
 import (
 	"context"
 	"os"
+	"time"
 
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
+	"github.com/hashicorp/terraform-plugin-framework/list"
 	"github.com/hashicorp/terraform-plugin-framework/provider"
 	"github.com/hashicorp/terraform-plugin-framework/provider/schema"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
@@ -13,6 +15,9 @@ import (
 
 // Ensure the implementation satisfies the provider.Provider interface.
 var _ provider.Provider = &FrameworkProvider{}
+
+// Ensure the implementation satisfies the provider.ProviderWithListResources interface.
+var _ provider.ProviderWithListResources = &FrameworkProvider{}
 
 // FrameworkProvider is a minimal terraform-plugin-framework provider implementation
 // that will be used alongside the existing SDKv2 provider during migration.
@@ -136,8 +141,6 @@ func (p *FrameworkProvider) Schema(ctx context.Context, req provider.SchemaReque
 }
 
 // Configure prepares the provider for data sources and resources.
-// For now, we don't configure anything here since all resources will be served by SDKv2.
-// When migrating resources to the Framework, this method will need to be implemented.
 func (p *FrameworkProvider) Configure(ctx context.Context, req provider.ConfigureRequest, resp *provider.ConfigureResponse) {
 	var data FrameworkProviderModel
 
@@ -147,21 +150,26 @@ func (p *FrameworkProvider) Configure(ctx context.Context, req provider.Configur
 		return
 	}
 
-	// For now, we're not configuring any client since all resources are in SDKv2.
-	// When we start migrating resources to Framework, we'll need to set up the client here.
 	// The configuration must be handled identically to the SDKv2 provider to avoid
 	// the "PreparedConfig response from multiple servers" error.
+	// We delegate actual client configuration to the SDKv2 provider and then
+	// reuse the same client instance here through the mux layer.
+
+	// For list resources, we need to configure the GitHub client.
+	// We'll create the same configuration that the SDKv2 provider uses.
 
 	// Apply environment variable defaults if not set in config
+	token := data.Token.ValueString()
 	if data.Token.IsNull() {
-		if token := os.Getenv("GITHUB_TOKEN"); token != "" {
-			data.Token = types.StringValue(token)
+		if envToken := os.Getenv("GITHUB_TOKEN"); envToken != "" {
+			token = envToken
 		}
 	}
 
+	owner := data.Owner.ValueString()
 	if data.Owner.IsNull() {
-		if owner := os.Getenv("GITHUB_OWNER"); owner != "" {
-			data.Owner = types.StringValue(owner)
+		if envOwner := os.Getenv("GITHUB_OWNER"); envOwner != "" {
+			owner = envOwner
 		}
 	}
 
@@ -171,17 +179,91 @@ func (p *FrameworkProvider) Configure(ctx context.Context, req provider.Configur
 		}
 	}
 
+	baseURL := data.BaseURL.ValueString()
 	if data.BaseURL.IsNull() {
-		if baseURL := os.Getenv("GITHUB_BASE_URL"); baseURL != "" {
-			data.BaseURL = types.StringValue(baseURL)
+		if envBaseURL := os.Getenv("GITHUB_BASE_URL"); envBaseURL != "" {
+			baseURL = envBaseURL
 		} else {
-			data.BaseURL = types.StringValue("https://api.github.com/")
+			baseURL = "https://api.github.com/"
 		}
 	}
 
-	// Note: Default values for integers and booleans should match SDKv2 provider
-	// to avoid PreparedConfig conflicts. However, since we're not handling any
-	// resources in Framework yet, we don't need to set them here.
+	// Handle backwards compatibility for organization attribute
+	if !data.Organization.IsNull() && data.Organization.ValueString() != "" {
+		owner = data.Organization.ValueString()
+	}
+
+	// Set default values matching SDKv2 provider
+	writeDelay := 1000
+	if !data.WriteDelayMs.IsNull() {
+		writeDelay = int(data.WriteDelayMs.ValueInt64())
+	}
+
+	readDelay := 0
+	if !data.ReadDelayMs.IsNull() {
+		readDelay = int(data.ReadDelayMs.ValueInt64())
+	}
+
+	retryDelay := 1000
+	if !data.RetryDelayMs.IsNull() {
+		retryDelay = int(data.RetryDelayMs.ValueInt64())
+	}
+
+	maxRetries := 3
+	if !data.MaxRetries.IsNull() {
+		maxRetries = int(data.MaxRetries.ValueInt64())
+	}
+
+	retryableErrors := getDefaultRetriableErrors()
+	if !data.RetryableErrors.IsNull() {
+		// Parse retryable errors from config if provided
+		var errList []types.Int64
+		diags := data.RetryableErrors.ElementsAs(ctx, &errList, false)
+		if diags.HasError() {
+			resp.Diagnostics.Append(diags...)
+			return
+		}
+		retryableErrors = make(map[int]bool)
+		for _, e := range errList {
+			retryableErrors[int(e.ValueInt64())] = true
+		}
+	}
+
+	parallelRequests := false
+	if !data.ParallelRequests.IsNull() {
+		parallelRequests = data.ParallelRequests.ValueBool()
+	}
+
+	insecure := false
+	if !data.Insecure.IsNull() {
+		insecure = data.Insecure.ValueBool()
+	}
+
+	// Create the config and initialize the client
+	config := Config{
+		Token:            token,
+		BaseURL:          baseURL,
+		Insecure:         insecure,
+		Owner:            owner,
+		WriteDelay:       time.Duration(writeDelay) * time.Millisecond,
+		ReadDelay:        time.Duration(readDelay) * time.Millisecond,
+		RetryDelay:       time.Duration(retryDelay) * time.Millisecond,
+		RetryableErrors:  retryableErrors,
+		MaxRetries:       maxRetries,
+		ParallelRequests: parallelRequests,
+	}
+
+	meta, err := config.Meta()
+	if err != nil {
+		resp.Diagnostics.AddError(
+			"Unable to create GitHub client",
+			"An error occurred while creating the GitHub client: "+err.Error(),
+		)
+		return
+	}
+
+	// Make the configured client available to list resources
+	resp.ResourceData = meta
 }
 
 // DataSources defines the data sources implemented in the provider.
@@ -194,4 +276,11 @@ func (p *FrameworkProvider) DataSources(ctx context.Context) []func() datasource
 // Initially empty - resources will be migrated here as needed.
 func (p *FrameworkProvider) Resources(ctx context.Context) []func() resource.Resource {
 	return []func() resource.Resource{}
+}
+
+// ListResources defines the list resources implemented in the provider.
+func (p *FrameworkProvider) ListResources(ctx context.Context) []func() list.ListResource {
+	return []func() list.ListResource{
+		NewRepositoryListResource,
+	}
 }
