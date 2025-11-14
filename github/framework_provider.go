@@ -263,7 +263,7 @@ func (p *FrameworkProvider) Configure(ctx context.Context, req provider.Configur
 	}
 
 	// Make the configured client available to list resources
-	resp.ResourceData = meta
+	resp.ListResourceData = meta
 }
 
 // DataSources defines the data sources implemented in the provider.
